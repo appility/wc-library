@@ -1,0 +1,16 @@
+<!-- Primary button in different sizes -->
+<app-button label="Primary Small" size="small" variant="primary"></app-button>
+<app-button label="Primary Medium" size="medium" variant="primary"></app-button>
+<app-button label="Primary Large" size="large" variant="primary"></app-button>
+
+<!-- Secondary button -->
+<app-button label="Secondary Medium" size="medium" variant="secondary"></app-button>
+
+<!-- Tertiary button -->
+<app-button label="Tertiary Medium" size="medium" variant="tertiary"></app-button>
+
+<!-- Hollow button -->
+<app-button label="Hollow Large" size="large" variant="hollow"></app-button>
+
+<!-- Disabled button -->
+<app-button label="Disabled" disabled></app-button>

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es6",                   // Target modern JavaScript
+    "module": "es6",                   // Use ES module system
+    "outDir": "./dist",                // Output compiled files to dist folder
+    "declaration": true,               // Generate declaration files for TypeScript
+    "declarationDir": "./dist/types",  // Output declaration files to dist/types
+    "strict": true,                    // Enable strict mode for better type safety
+    "moduleResolution": "node",        // Resolve modules in node_modules
+    "esModuleInterop": true,           // Better compatibility with CommonJS modules
+    "sourceMap": true,                  // Enable sourcemaps for debugging
+    "typeRoots": ["./types", "node_modules/@types"]
+  },
+  "include": ["src/**/*.ts"],           // Include all .ts files in src folder
+  "exclude": ["node_modules"]           // Exclude node_modules
+}

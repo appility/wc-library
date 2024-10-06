@@ -1,0 +1,19 @@
+<app-grid>
+  <!-- Full-width item -->
+  <app-grid-item span="12">Full Width</app-grid-item>
+
+  <!-- Half-width items -->
+  <app-grid-item span="6">Half Width 1</app-grid-item>
+  <app-grid-item span="6">Half Width 2</app-grid-item>
+
+  <!-- Third-width items -->
+  <app-grid-item span="4">One Third</app-grid-item>
+  <app-grid-item span="4">One Third</app-grid-item>
+  <app-grid-item span="4">One Third</app-grid-item>
+
+  <!-- Quarter-width items -->
+  <app-grid-item span="3">One Quarter</app-grid-item>
+  <app-grid-item span="3">One Quarter</app-grid-item>
+  <app-grid-item span="3">One Quarter</app-grid-item>
+  <app-grid-item span="3">One Quarter</app-grid-item>
+</app-grid>
