@@ -1,0 +1,350 @@
+{
+    "dsp_spec_version": "1.0",
+    "last_updated_by": "appility",
+    "last_updated": "2024-10-09T12:53:30.113Z",
+    "settings": {},
+    "entities": [
+      {
+        "class": "token",
+        "type": "color",
+        "id": "color_background-body",
+        "value": "#233042",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "color",
+        "id": "color_primary-body",
+        "value": "#354156",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "color",
+        "id": "color_blue-light",
+        "value": "#30aab3",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "color",
+        "id": "color_yellow",
+        "value": "#ffca30",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "color",
+        "id": "color_red",
+        "value": "#fa3757",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "color",
+        "id": "color_red-dark",
+        "value": "#e02045",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "color",
+        "id": "color_green-dark",
+        "value": "#4d967b",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "color",
+        "id": "color_background-primary",
+        "value": "#fcfcf4",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "spacing_small",
+        "value": "4px",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "spacing_medium",
+        "value": "8px",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "spacing_large",
+        "value": "12px",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "spacing_x-large",
+        "value": "20px",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "duration_paused",
+        "value": "paused",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "duration_slow",
+        "value": "3s",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "duration_fast",
+        "value": "500ms",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "easing_easeInSine",
+        "value": "cubic-bezier(0.12, 0, 0.39, 0)",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "easing_easeOutSine",
+        "value": "cubic-bezier(0.61, 1, 0.88, 1)500ms",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "radius_circle",
+        "value": "50%",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "radius_large",
+        "value": "8px",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "radius_small",
+        "value": "2px",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "opacity_opacity-25",
+        "value": "0.25",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "opacity_opacity-50",
+        "value": "0.5",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "opacity_opacity-75",
+        "value": "0.75",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "shadow_level-1",
+        "value": "0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "shadow_level-2",
+        "value": "0 3px 4px 0 rgba(0,0,0,0.14), 0 3px 3px -2px rgba(0,0,0,0.12), 0 1px 8px 0 rgba(0,0,0,0.20);",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "shadow_level-3",
+        "value": "0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20)",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "mediaQuery_max-width-mobile",
+        "value": "600px",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "mediaQuery_max-width-tablet",
+        "value": "1024px",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "fontFamily_body",
+        "value": "Arial, Helvetica, sans-serif",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "fontFamily_headings",
+        "value": "Palatino Linotype, serif",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "fontSize_caption",
+        "value": "12px",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "fontSize_body",
+        "value": "16px",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "fontSize_headings",
+        "value": "26px",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "letterSpacing_dense",
+        "value": "-1px",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "letterSpacing_double",
+        "value": "2px",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "lineHeight_heading",
+        "value": "1.25",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "lineHeight_reset",
+        "value": "1",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      },
+      {
+        "class": "token",
+        "type": "custom",
+        "id": "lineHeight_text",
+        "value": "1.5",
+        "last_updated": "2024-10-09T12:53:30.113Z",
+        "last_updated_by": "Layoutit",
+        "description": ""
+      }
+    ]
+  }

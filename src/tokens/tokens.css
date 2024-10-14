@@ -1,74 +1,171 @@
 /* design-tokens.css */
-/* Base color tokens */
+
+/* Global Color Palette */
 :root {
-    --primary-color: #1976d2;
-    --secondary-color: #03dac6;
-    --success-color: #4caf50;
-    --danger-color: #f44336;
-    --neutral-color: #9e9e9e;
-  
-    /* Typography */
-    --font-size-small: 12px;
-    --font-size-medium: 16px;
-    --font-size-large: 20px;
-    --font-family: "Arial", sans-serif;
-  
-    /* General spacing and layout */
-    --border-radius: 4px;
-    --padding-small: 8px;
-    --padding-medium: 16px;
-    --padding-large: 24px;
-  }
-  
-  /* Specific component tokens */
-  :root {
-    /* Primary Button Tokens */
-    --primary-button-color: var(--primary-color);
-    --primary-button-text-color: white;
-    --primary-button-hover-color: var(--primary-color-hover, #3700b3);
-    
-    /* Secondary Button Tokens */
-    --secondary-button-color: var(--secondary-color);
-    --secondary-button-text-color: black;
-    
-    /* Danger Button Tokens */
-    --danger-button-color: var(--danger-color);
-    --danger-button-text-color: white;
-    
-    /* Success Button Tokens */
-    --success-button-color: var(--success-color);
-    --success-button-text-color: white;
-  
-    /* Neutral Button Tokens */
-    --neutral-button-color: var(--neutral-color);
-    --neutral-button-text-color: white;
-  }
-  
-  /* <style>
-      --q-primary: #1976d2;
-    --q-secondary: #26A69A;
-    --q-accent: #9C27B0;
-    --q-positive: #21BA45;
-    --q-negative: #C10015;
-    --q-info: #31CCEC;
-    --q-warning: #F2C037;
-  :root {
-    --primary-color: #ff5722; /* Custom primary color 
-    --font-size-medium: 18px; /* Custom font size 
-  }
-</style>
+  --primary-color: #1976d2;
+  --primary-color-hover: #3700b3;
+  --secondary-color: #03dac6;
+  --success-color: #4caf50;
+  --danger-color: #f44336;
+  --neutral-color: #9e9e9e;
 
-<app-button label="Custom Button"></app-button> 
+  /* Greys */
+  --grey-canvas: #F6F6F6;
+  --grey-10: #E3E3E3;
+  --grey-20: #B1B2B5;
+  --grey-30: #7B7D85;
+  --grey-40: #64666A;
+  --grey-50: #303236;
+  --grey-60: #1F1F1F;
 
-<style>
-  app-button {
-    --primary-color: #007bff;
-    --primary-text-color: white;
-    --success-color: #28a745;
+  /* Light Mode */
+  --color-background: #ffffff;
+  --color-border: #e5e7eb;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-text-primary: #333;
+  --color-divider: #e5e7eb;
+
+  /* Typography */
+  --base-font-family: 'Roboto', sans-serif;
+  --heading-font-family: 'Lora', serif;
+  --font-size-small: 12px;
+  --font-size-medium: 16px;
+  --font-size-large: 20px;
+  --line-height: 1.5;
+
+  /* Spacing Scale */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-s: 16px;
+  --space-m: 24px;
+  --space-l: 32px;
+  --space-xl: 40px;
+  --space-xxl: 48px;
+  --space-jumbo: 64px;
+
+  /* Responsive font sizes */
+  --font-size-xs-sm: 0.65em;
+  --font-size-s-sm: 0.75em;
+  --font-size-m-sm: 0.85em;
+  --font-size-l-sm: 1em;
+  --font-size-xl-sm: 1.25em;
+  --font-size-xxl-sm: 1.5em;
+  --font-size-jumbo-sm: 2em;
+
+  /* Tablet font sizes */
+  --font-size-xs-md: 0.7em;
+  --font-size-s-md: 0.8em;
+  --font-size-m-md: 0.9em;
+  --font-size-l-md: 1.125em;
+  --font-size-xl-md: 1.375em;
+  --font-size-xxl-md: 1.75em;
+  --font-size-jumbo-md: 2.5em;
+
+  /* Desktop font sizes */
+  --font-size-xs: 0.75em;
+  --font-size-s: 0.875em;
+  --font-size-m: 1em;
+  --font-size-l: 1.25em;
+  --font-size-xl: 1.5em;
+  --font-size-xxl: 2em;
+  --font-size-jumbo: 3em;
+
+  /* Component Spacing */
+  --border-radius: 8px;
+  --padding-small: 8px;
+  --padding-medium: 16px;
+  --padding-large: 24px;
+
+  /* Responsive Breakpoints */
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1536px;
+}
+
+  --color-shadow-small: 0px 2px 4px rgba(0, 0, 0, 0.1)
+  --color-shadow-medium: 0px 2px 4px rgba(0, 0, 0, 0.1)
+  --color-shadow-large: 0px 2px 4px rgba(0, 0, 0, 0.1)
+
+/* Dark Mode Variables */
+@media (prefers-color-scheme: dark) {
+  :root, .dark-mode {
+    --color-background: #1a1a1a;
+    --color-border: #444;
+    --color-shadow: rgba(255, 255, 255, 0.1);
+    --color-text-primary: #f0f0f0;
+    --color-divider: #444;
   }
-</style>
+}
 
-<app-button label="Custom Primary" variant="primary"></app-button>
-<app-button label="Custom Success" variant="success"></app-button>
+/* Button Tokens */
+:root {
+  /* Default Button */
+  --default-button-color: var(--neutral-color);
+  --default-button-text-color: white;
+  --default-button-hover-color: var(--neutral-color);
 
-*/
+  /* Primary Button */
+  --primary-button-color: var(--primary-color);
+  --primary-button-text-color: white;
+  --primary-button-hover-color: var(--primary-color-hover);
+
+  /* Secondary Button */
+  --secondary-button-color: var(--secondary-color);
+  --secondary-button-text-color: black;
+
+  /* Success and Danger Buttons */
+  --success-button-color: var(--success-color);
+  --success-button-text-color: white;
+  --danger-button-color: var(--danger-color);
+  --danger-button-text-color: white;
+}
+
+/* Card Component Tokens */
+:root {
+  /* Background and Border */
+  --card-background-color: var(--color-background);
+  --card-border-color: var(--color-border);
+  --card-border-radius: var(--border-radius);
+  
+  /* Shadow */
+  --card-shadow: var(--color-shadow);
+  
+  /* Text */
+  --card-text-color: var(--color-text-primary);
+  
+  /* Divider */
+  --divider-color: var(--color-divider);
+  
+  /* Padding */
+  --card-padding-header: 16px;
+  --card-padding-content-small: 8px;
+  --card-padding-content-medium: 20px;
+  --card-padding-content-large: 32px;
+  --card-padding-footer: 16px;
+
+  /* Responsive Padding */
+  --card-padding-header-sm: 24px;
+  --card-padding-content-small-sm: 12px;
+  --card-padding-content-medium-sm: 24px;
+  --card-padding-content-large-sm: 40px;
+  --card-padding-footer-sm: 16px;
+
+  /* Typography */
+  --card-header-font-size: 1.25em;
+  --card-header-font-weight: bold;
+  --card-footer-font-size: 0.9em;
+  --card-footer-text-color: #666;
+}
+
+
+/* Typography Usage */
+.typography {
+  font-family: var(--base-font-family);
+}
+
+.typography--heading {
+  font-family: var(--heading-font-family);
+}

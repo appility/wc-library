@@ -1,0 +1,32 @@
+Example of Overriding CSS Variables in :root
+A user can override variables globally for all AppCard instances by defining them in the :root scope.
+
+/* Overrides for all components globally */
+:root {
+  --card-background-color: #f3f4f6;
+  --card-text-color: #444;
+  --card-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  --card-border-radius: 12px;
+  --card-padding-header: 24px;
+  --card-padding-content: 20px;
+  --card-padding-footer: 12px;
+}
+Example of Overriding CSS Variables for Specific Instances
+Alternatively, users can override variables for individual AppCard instances by targeting the component’s custom element selector:
+
+/* Overrides for specific instances */
+app-card {
+  --card-background-color: #e0f7fa;
+  --card-text-color: #005662;
+  --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  --card-padding-header: 20px;
+}
+
+Dynamic Overrides Using Inline Styles
+In cases where users want to control variables directly in HTML, inline styles can also override the component’s defaults, though CSS-in-JS frameworks can often achieve this more cleanly:
+
+html
+Copy code
+<app-card style="--card-background-color: #ffe082; --card-text-color: #333;">
+  <!-- Slots go here -->
+</app-card>

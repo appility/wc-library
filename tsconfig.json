@@ -11,6 +11,6 @@
     "sourceMap": true,                  // Enable sourcemaps for debugging
     "typeRoots": ["./types", "node_modules/@types"]
   },
-  "include": ["src/**/*.ts"],           // Include all .ts files in src folder
+  "include": ["src/**/*.ts", "src/app-button/app-button.stories.js", "src/app-typography/stories/app-typography.stories.js"],           // Include all .ts files in src folder
   "exclude": ["node_modules"]           // Exclude node_modules
 }

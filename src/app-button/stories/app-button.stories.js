@@ -14,10 +14,17 @@ export default {
       options: ['primary', 'secondary', 'default', 'success', 'danger'],
     },
     outlined: {
-      control: 'boolean',  // Ensure boolean control is set
+      control: 'boolean',
     },
     disabled: {
       control: 'boolean',
+    },
+  },
+  parameters: {
+    docs: {
+      source: {
+        type: 'auto', // Automatically captures rendered HTML
+      },
     },
   },
 };
@@ -27,13 +34,12 @@ export default {
 // Template function for all stories
 const Template = (args) => {
   console.log('Storybook args:', args);
-  
-  // Log whether outlined is passed correctly as an attribute
   const buttonElement = `<app-button 
     label="${args.label}" 
     size="${args.size}" 
     variant="${args.variant}" 
     outlined="${args.outlined ? 'true' : 'false'}"
+    stretch="${args.stretch ? 'true' : 'false'}"
     ?disabled="${args.disabled}"
     @click="${action('button-clicked')}"></app-button>
     `;
@@ -42,9 +48,6 @@ const Template = (args) => {
   
   return buttonElement;
 };
-
-
-
 
 // Default Button Stories
 export const DefaultSmall = Template.bind({});
@@ -81,6 +84,7 @@ PrimaryMedium.args = {
   label: 'Primary Medium',
   size: 'medium',
   variant: 'primary',
+  stretch: true
 };
 
 export const PrimaryLarge = Template.bind({});

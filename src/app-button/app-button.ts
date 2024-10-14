@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit';
+import { LitElement, html, css, PropertyValues } from 'lit';
 import { classMap } from 'lit/directives/class-map.js'; // Import classMap
 
 class AppButton extends LitElement {
@@ -6,8 +6,8 @@ class AppButton extends LitElement {
     /* Base button styles */
     button {
       display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    align-items: center; /* Vertically align all children */
+    justify-content: center;
       border: none;
       border-radius: var(--border-radius, 4px);
       font-family: var(--font-family, "Gill Sans");
@@ -15,9 +15,15 @@ class AppButton extends LitElement {
       font-weight: var(--font-weight, 400);
       padding: 10px 20px;
       cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+      transition: outline 0.1s ease, background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    button:not(.outlined):hover {
+      outline: 2px solid white;
+      outline-offset: -4px;
     }
 
     /* Size variants */
@@ -31,6 +37,10 @@ class AppButton extends LitElement {
       height: 40px; /* Fixed height for medium button */
       padding: 10px 20px;
       font-size: var(--font-size-medium, 16px);
+      padding-top: .625rem;
+      padding-bottom: .625rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
     .large {
@@ -39,25 +49,31 @@ class AppButton extends LitElement {
       font-size: var(--font-size-large, 20px);
     }
 
-    /* Add space between text and suffix */
-    span {
-      margin: 0 8px; /* Adds space between the prefix and suffix */
-    }
-
     /* Style for slots */
-    [slot="prefix"] {
+    ::slotted([slot="prefix"]) {
       margin-right: 8px; /* Adds space between the prefix and text */
-      font-family: "Arial", sans-serif; /* Force it to use a non-emoji font */
+    }
+
+    ::slotted([slot="suffix"]) {
+      margin-left: 8px; /* Adds space between the text and suffix */
+    }
+
+    /* Style for slotted prefix and suffix elements */
+    ::slotted([slot="prefix"]),
+    ::slotted([slot="suffix"]) {
+      display: inline-flex;
+      align-items: center; /* Center content within slot */
       font-size: 16px;
       color: currentColor; /* Ensures it inherits the text color */
     }
 
-    [slot="suffix"] {
-      margin-left: 8px; /* Adds space between the text and suffix */
-      font-family: "Arial", sans-serif; /* Force it to use a non-emoji font */
-      font-size: 16px;
-      color: currentColor; /* Ensures it inherits the text color */
-    }
+
+  /* Text span inside the button */
+  span {
+    display: inline-flex;
+    align-items: center; /* Align text and SVG within button */
+    vertical-align: middle;
+  }
 
     /* Button Variants using component-specific tokens */
     .default {
@@ -68,6 +84,12 @@ class AppButton extends LitElement {
     .primary {
       background-color: var(--primary-button-color, #1976d2);
       color: var(--primary-button-text-color, white);
+    }
+    @media (prefers-color-scheme: dark) {
+      button {
+        background-color: var(--primary-button-color-dark, #2196f3); /* Lighter color for dark mode */
+        color: var(--primary-button-text-color-dark, #ffffff); /* White text on dark background */
+      }
     }
 
     .secondary {
@@ -138,6 +160,10 @@ class AppButton extends LitElement {
       color: var(--disabled-button-text-color, #666666);
       cursor: not-allowed;
     }
+    /* width */
+    .stretch {
+      width: 100%;
+    }
   `;
 
   // Declare reactive properties
@@ -147,6 +173,7 @@ class AppButton extends LitElement {
     variant: { type: String },
     outlined: { type: Boolean, reflect: true },  // Reflect true to ensure sync between attribute and property
     disabled: { type: Boolean },
+    stretch: { type: Boolean, reflect: true }, 
   };
   
 
@@ -155,6 +182,7 @@ class AppButton extends LitElement {
   variant: string;
   outlined: boolean;
   disabled: boolean;
+  stretch: boolean;
 
   constructor() {
     super();
@@ -163,45 +191,44 @@ class AppButton extends LitElement {
     this.variant = 'default'; // Default variant
     this.outlined = false;    // Only false if not passed externally
     this.disabled = false;    // Default disabled state
+    this.stretch = false
   }
   
 
   connectedCallback() {
     super.connectedCallback();
-    
-    // Log the attribute value to verify it's being passed
     const outlinedAttr = this.getAttribute('outlined');
-    console.log('Component connected, outlined attribute:', outlinedAttr);
-    
     // If outlined attribute is present, sync it with the property
     if (outlinedAttr !== null) {
       this.outlined = outlinedAttr === 'true';  // Explicitly convert to boolean
     }
-    
+    const stretchAttr = this.getAttribute('stretch');
+    if (stretchAttr !== null) {
+      this.stretch = stretchAttr === 'true';
+    }
+
     console.log('Component connected, outlined property:', this.outlined);
   }
   
-
-  updated(changedProperties: any) {
-    console.log('Component updated, outlined value:', this.outlined);
-    console.log('Changed properties:', changedProperties);
-    
-    if (changedProperties.has('outlined')) {
-      console.log('Outlined changed:', this.outlined);
+  updated(changedProperties: PropertyValues) {
+    // Ensure the default variant is set if the property is missing or undefined
+    if (this.variant === undefined || this.variant === 'undefined' || this.variant === '') {
+      this.variant = 'default';
     }
   }
   
-  
-  
-
   // Render the button with dynamic classes based on size, variant, and outlined state
   render() {
-    // Build the class map for the button
+    const variantClass = this.variant || 'default';
+    debugger
+    // Build the class map, including the correct variant and outlined only if true
     const classes = {
       [this.size]: true,
-      [this.variant]: true,
+      [variantClass]: true,
       outlined: this.outlined,
+      stretch: this.stretch,
     };
+
     console.log('Outlined value:', this.outlined);  // Should be true or false
     console.log('Classes:', classes); 
 
@@ -219,3 +246,18 @@ class AppButton extends LitElement {
 }
 
 customElements.define('app-button', AppButton);
+
+
+
+{/* <app-button label="Download" variant="primary" size="large">
+  <!-- SVG in the prefix slot -->
+  <svg slot="prefix" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.646 2.146a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1-.708.708L8.5 3.707V13.5a.5.5 0 0 1-1 0V3.707L3.354 7.854a.5.5 0 1 1-.708-.708l5-5z"/>
+  </svg>
+
+  <!-- SVG in the suffix slot -->
+  <svg slot="suffix" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.646 10.646a.5.5 0 0 1 .708 0l3 3l3-3a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+  </svg>
+</app-button> */}
+

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A collection of web components for building modern UIs",
   "main": "dist/wc-componens.js",
-  "module": "dist/wc-componens.js", 
+  "module": "dist/wc-componens.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
@@ -17,16 +17,19 @@
     "clear-storybook-cache": "rm -rf node_modules/.cache/storybook",
     "storybook": "npm run clear-storybook-cache && storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepublishOnly": "npm run build" 
+    "prepublishOnly": "npm run build",
+    "colors": "cat scripts/generateColors.js | node --input-type=module"
   },
   "author": "Dermot Byrne",
   "license": "ISC",
   "dependencies": {
+    "@storybook/addon-docs": "^8.3.5",
     "lit": "^3.2.0",
     "tslib": "^2.7.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.9.0",
+    "@rollup/plugin-commonjs": "^28.0.0",
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-typescript": "^12.1.0",
     "@storybook/addon-essentials": "^8.3.5",
@@ -35,11 +38,17 @@
     "@storybook/test": "^8.3.5",
     "@storybook/web-components": "^8.3.5",
     "@storybook/web-components-vite": "^8.3.5",
+    "@types/color": "^3.0.6",
+    "@types/tinycolor2": "^1.4.6",
+    "color": "^4.2.3",
+    "create-html": "^4.1.0",
     "rimraf": "^6.0.1",
     "rollup": "^2.79.2",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
     "storybook": "^8.3.5",
+    "tinycolor2": "^1.6.0",
     "typescript": "^5.6.2",
     "vite": "^5.4.8"
   }
